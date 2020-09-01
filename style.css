@@ -245,4 +245,8 @@ a:hover {
     .person {
         display: none;
     }
+    .diamond-grid {
+    margin-top: 0vh;
+    margin-left: 10vw;
+    }
 }
