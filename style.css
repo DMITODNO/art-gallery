@@ -249,4 +249,7 @@ a:hover {
     margin-top: 0vh;
     margin-left: 5vw;
     }
+  .cloud {
+    animation: none;
+    }
 }
