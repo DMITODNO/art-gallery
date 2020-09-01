@@ -1,0 +1,248 @@
+
+body {
+  background-color: black;
+  animation: intro 10s;
+}
+
+.gallerybackground {
+  background: url(./img/20.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.page-back {
+  width: 120vw;
+  height: 120vh;
+  top: -10vh;
+  left: -10vw;
+  position: absolute;
+  background-image: url(./img/main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.grass {
+  width: 120vw;
+  height: 60vh;
+  top: 70vh;
+  position: absolute;
+  background-image: url(./img/black-grass-png.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: blur(4px);
+-webkit-box-shadow: inset 1px -200px 129px -63px rgba(0,0,0,1);
+-moz-box-shadow: inset 1px -200px 129px -63px rgba(0,0,0,1);
+box-shadow: inset 1px -200px 129px -63px rgba(0,0,0,1);
+  z-index: 2;
+}
+.rock {
+  width: 400px;
+  height: 115vh;
+  top: -6vh;
+  right: -5vw;
+  position: absolute;
+  background-image: url(./img/rock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: blur(3px);
+  z-index: 1;
+}
+.person {
+  width: 250px;
+  height: 600px;
+  right: 30vw;
+  bottom: 0vh;
+  position: absolute;
+  background-image: url(./img/persone.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  -webkit-filter: blur(1px);
+    
+}
+.cloud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./img/cloud.png);
+  background-size: cover;
+  animation: animate 400s linear infinite;
+}
+.cloud1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    opacity: 0.2;
+  background: url(./img/cloud1.png);
+  background-size: cover;
+  animation: animate 400s linear infinite;
+}
+
+.text {
+  text-align: center;
+  margin-top: 30vh;
+  font-family: "Amatic SC", cursive;
+  text-shadow: 2px 2px 10px black;
+  opacity: 0.9;
+}
+.text1 {
+  text-align: center;
+  margin-top: 10vh;
+  font-family: "Amatic SC", cursive;
+  text-shadow: 2px 2px 10px black;
+  opacity: 0.9;
+}
+a {
+  color: black;
+  text-decoration: none;
+    font-size: 2rem;
+}
+
+a:hover {
+  color: white;
+}
+
+.diamond-grid {
+  width: 70%;
+    margin-top: 20vh;
+    margin-left: 19vw;
+}
+.item {
+  background: rgb(158, 35, 35);
+}
+
+.item:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.item img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) scale(1.5);
+  transition: 0.5s;
+}
+.item img:hover {
+  width: 70%;
+  left: 15%;
+  transition: 0.5s;
+}
+.diamonds {
+  text-align: center;
+  overflow: visible;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.diamond-row-wrap {
+  text-align: center;
+  position: relative;
+  float: left;
+  clear: both;
+}
+.diamond-row-upper,
+.diamond-row-lower {
+  overflow: visible;
+  clear: both;
+  width: 100%;
+}
+.diamond-row-lower {
+  position: absolute;
+  bottom: 0;
+}
+.diamond-row-lower .diamond-box {
+  margin-left: 64.644660941%; /* 0.5 + 1 / sqrt(2) / 2 */
+  margin-top: 64.644660941%;
+}
+
+.diamond-box-wrap {
+  float: left;
+  width: 250px; /* Size of diamonds */
+  height: 250px;
+}
+
+.diamond-box {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  position: relative;
+  z-index: 1;
+
+  width: 70.710678118%; /* x = sqrt(x^2 / 2) = 1 / sqrt(2) = 0.70710678118 */
+  height: 70.710678118%;
+  margin: 14.644660941%;
+
+  border: 1px solid transparent;
+}
+
+.diamond-box-inner {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 141.421356237%; /* sqrt(2) */
+  height: 141.421356237%;
+  margin: -20.7106781185% 0 0 -20.7106781185%; /* (1 - sqrt(2)) / 2 */
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -5440px;
+  }
+}
+@media screen and (max-width: 768px) {
+    .rock {
+        display: none;
+    }
+    .person {
+        display: none;
+    }
+}
